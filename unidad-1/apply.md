@@ -74,7 +74,7 @@ Link de la exploración: https://editor.p5js.org/Jakeline-Avila/sketches/Qf1SHzP
 
 *Tinker*
 
-Se me ha roto el dibujo: <img width="1782" height="1084" alt="image" src="https://github.com/user-attachments/assets/b8e5c808-efc7-4404-a134-13a97f2fc7c8" />
+Se me ha roto el dibujo al intentar volverlo distintas lineas pero funciona: <img width="1782" height="1084" alt="image" src="https://github.com/user-attachments/assets/b8e5c808-efc7-4404-a134-13a97f2fc7c8" />
 
 Link del experimento: https://editor.p5js.org/Jakeline-Avila/sketches/y2nKJtGTF
 
