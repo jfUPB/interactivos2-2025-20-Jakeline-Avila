@@ -32,4 +32,8 @@ R/= De lo que yo me acuerdo es que cree un lienzo del cual aparecen 3 formas que
 
 - La Actividad 05 te pedía explícitamente “disfruta del proceso, experimenta, juega, diviértete”. Describe un momento durante esa actividad en el que te sentiste realmente explorando o jugando, y qué descubriste en ese momento.
 
-R/= En la parte de explore y thinker, 
+R/= En la parte de explore y thinker, se me creaban unos bugs todo extraños que parecía como si iba a explotar el pc junto con la ram y me pareció divertido. Me gustó mucho lo de jugar con los parámetros y ver como todo el lienzo se transformaba con solo cambiar un dato.
+
+- Reflexiona sobre la aplicación del método Deconstrucción/Reconstrucción. ¿Qué etapa te resultó más desafiante? ¿Cuál te pareció más útil para tu aprendizaje?
+
+R/= Si fue útil de cierta forma, me tomó demasiado tiempo eso si debo admitir. Después de todo es como empezar desde cero y 
