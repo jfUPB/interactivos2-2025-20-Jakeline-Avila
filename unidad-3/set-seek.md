@@ -4,25 +4,42 @@
 
 ### Actividad 01
 
-Diagrama de bloques:
-
-[Cliente Móvil (Mobile.js)]  
-       │ (touchMoved -> genera JSON con coordenadas x,y)
-       ▼
-[Socket.IO en Cliente Móvil]  
-       │ (socket.emit('message', datos))
-       ▼
-[Servidor Node.js con Express + Socket.IO]  
-       │ (recibe mensaje y lo reenvía con socket.broadcast.emit)
-       ▼
-[Socket.IO en Cliente Escritorio (Desktop.js)]  
-       │ (socket.on('message') recibe datos JSON)
-       ▼
-[Lógica en Desktop.js]  
-       │ (parsea coordenadas x,y y actualiza circleX, circleY)
-       ▼
-[Pantalla Escritorio]  
-       ● Dibuja el círculo rojo en la nueva posición
++-----------------------------+                   
+|  Cliente Móvil (mobile.js)  |                   
+|   p5.js - Captura touch     |                   
++-----------------------------+                   
+               |                                   
+               v                                   
++-----------------------------+                   
+|    Socket.IO (Móvil)        |                   
+|  emit("message", JSON{x,y}) |                   
++-----------------------------+                   
+               |                                   
+               v                                   
++-----------------------------+                   
+|  Servidor Node.js           |                   
+| Express + Socket.IO         |                   
+| recibe y hace broadcast     |                   
++-----------------------------+                   
+               |                                   
+               v                                   
++-----------------------------+                   
+|    Socket.IO (Escritorio)   |                   
+|   on("message", parse JSON) |                   
++-----------------------------+                   
+               |                                   
+               v                                   
++-----------------------------+                   
+| Cliente Escritorio          |                   
+| p5.js - desktop.js          |                   
+| Actualiza circleX, circleY  |                   
++-----------------------------+                   
+               |                                   
+               v                                   
++-----------------------------+                   
+|  Pantalla Escritorio        |                   
+|  Dibuja círculo rojo        |                   
++-----------------------------+                   
 
 
 1. Descripción paso por paso del flujo de datos
@@ -66,3 +83,4 @@ socket.broadcast.emit('message', message);
 ```
 circleX = parsedData.x;
 ```
+
