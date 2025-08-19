@@ -84,3 +84,6 @@ socket.broadcast.emit('message', message);
 circleX = parsedData.x;
 ```
 
+### Actividad 02
+
+
