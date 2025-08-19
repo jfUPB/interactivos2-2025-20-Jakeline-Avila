@@ -87,3 +87,91 @@ circleX = parsedData.x;
 ### Actividad 02
 
 
+Codigo cambiado:
+
+server
+
+```
+const express = require('express');
+const http = require('http');
+const socketIO = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const io = socketIO(server);
+const port = 3000;
+
+app.use(express.static('public'));
+
+io.on('connection', (socket) => {
+    console.log('✅ Nuevo cliente conectado');
+
+    socket.on('message', (message) => {
+        console.log(`📩 Mensaje recibido del cliente: ${message}`);
+        socket.broadcast.emit('message', message);
+    });
+
+    socket.on('disconnect', () => {
+        console.log('❌ Cliente desconectado');
+    });
+});
+
+server.listen(port, () => {
+    console.log(`🚀 Servidor escuchando en http://localhost:${port}`);
+});
+
+```
+
+Mobile sketch
+
+```
+let socket;
+
+function setup() {
+  noCanvas();
+  socket = io();
+
+  socket.on('connect', () => {
+    console.log('📱 Cliente móvil conectado');
+  });
+
+  // Simular datos cada 2s
+  setInterval(() => {
+    let touchData = {
+      type: 'touch',
+      x: int(random(0, 300)),
+      y: int(random(0, 400))
+    };
+    socket.emit('message', JSON.stringify(touchData));
+    console.log('📤 Enviado desde móvil:', touchData);
+  }, 2000);
+}
+
+```
+
+Desktop sketch
+
+```
+let socket;
+
+function setup() {
+  noCanvas();
+  socket = io();
+
+  socket.on('connect', () => {
+    console.log('💻 Cliente escritorio conectado');
+  });
+
+  socket.on('message', (data) => {
+    try {
+      let parsed = JSON.parse(data);
+      if (parsed.type === 'touch') {
+        console.log(`📥 Escritorio recibió: X=${parsed.x}, Y=${parsed.y}`);
+      }
+    } catch (e) {
+      console.error('❌ Error al parsear:', e);
+    }
+  });
+}
+
+```
