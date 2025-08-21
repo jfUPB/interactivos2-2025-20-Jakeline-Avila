@@ -1,6 +1,7 @@
 # Unidad 3
 
-## 🔎 Fase: Set + Seek
+## 🔎 Fase: Set + Seek (No entregó set-seek a tiempo. Esta nota la deja el profesor)
+
 
 ### Actividad 01
 
@@ -175,3 +176,4 @@ function setup() {
 }
 
 ```
+
