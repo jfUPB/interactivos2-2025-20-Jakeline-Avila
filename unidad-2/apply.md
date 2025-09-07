@@ -153,3 +153,4 @@ La puesta en escena aprovecha la estética oscura y mitológica del Hades, el so
 
 El público tiene un papel activo al decidir cómo interactuar con Caronte y qué camino seguir. Esta capacidad de influir en el desarrollo y el desenlace de la historia refuerza la sensación de control y compromiso emocional con el relato.
 
+
