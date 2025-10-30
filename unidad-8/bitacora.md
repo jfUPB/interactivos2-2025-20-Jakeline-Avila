@@ -19,4 +19,5 @@ Has utilizado la rúbrica para obtener tu **"Nota Base"**. Ahora, reflexiona hon
 
 ---
 
-[Enlace al playlist](https://youtu.be/your-playlist-link)
+[PlaylistNodkrai](https://www.youtube.com/playlist?list=PLsE5RY3kQpJqqucamKa1DCYhtsLrZ1LLV)
+
